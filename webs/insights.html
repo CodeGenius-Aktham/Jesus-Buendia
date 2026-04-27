@@ -11,8 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../Estilos/style.css">
+
+         <!-- Librerías de Animación (AGREGADO) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>''
 </head>
-<body>
+<body class="dark-metod">
      <!-- Botón WhatsApp Flotante -->
     <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
         <svg width="32" height="32" fill="currentColor" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.8 69.4 27.2 106.2 27.2 122.4 0 222-99.6 222-222 0-59.3-23-115.1-65-157.1zM223.9 446.3c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 366.4l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-82.7 184.6-184.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.5-11.2 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.6-9.2 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
@@ -21,17 +25,149 @@
     <!-- Navegación -->
     <div class="nav-container">
         <nav class="navbar">
-            <a href="#inicio" class="nav-link">Inicio</a>
+            <a href="../index.html" class="nav-link">Inicio</a>
             <a href="webs/vision.html" class="nav-link">Visión 360°</a>
             <a href="webs/sobremi.html" class="nav-link">Sobre mí</a>
             <a href="webs/insights.html" class="nav-link active">Metodo Dark</a>
         </nav>
     </div>
 
-    <!-- Fondo Decorativo -->
-    <div class="bg-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
+ <div class="smooth-wrapper">
+        <section class="hero-sticky-section">
+            <h1 class="dark-method-title">DARK<br>METHOD</h1>
+            <div class="hero-description">
+                <p>El sistema definitivo para transformar infraestructuras digitales en ecosistemas de alta rentabilidad.</p>
+            </div>
+            <div class="feature-cards">
+                <div class="card card-1">
+                    <h3>01. Análisis Profundo</h3>
+                    <p>Detectamos fugas de capital en tu ecosistema digital.</p>
+                </div>
+                <div class="card card-2">
+                    <h3>02. Optimización</h3>
+                    <p>Estructuras sólidas preparadas para el escalado.</p>
+                </div>
+                <div class="card card-3">
+                    <h3>03. Ejecución</h3>
+                    <p>Implementación táctica con tecnología de vanguardia.</p>
+                </div>
+                <div class="card card-4">
+                    <h3>04. Resultados</h3>
+                    <p>Incrementos medibles y sostenibles en el tiempo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN FINAL MEJORADA -->
+        <section class="ready-section">
+            <div class="ready-content">
+                <h2 class="ready-title">¿ESTÁS LISTO?</h2>
+                <p class="ready-subtitle" style="color: rgb(158, 177, 255);">El Método Dark no es para todos. Solo para aquellos que están dispuestos a dominar su mercado.</p>
+                <a href="../index.html#contacto" class="cta-button">EMPEZAR AHORA</a>
+            </div>
+        </section>
     </div>
+
+
+    <section class="results-section">
+            <div class="results-grid">
+                <div class="results-content">
+                    <span class="tag">Data & ROI</span>
+                    <h2 style="font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; color: rgb(103, 94, 167);">Impacto Cuantificable en tu Cuenta de Resultados</h2>
+                    <p style="color: var(--gray); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem; color: rgb(158, 177, 255);">
+                        No vendemos estética, vendemos eficiencia económica. El Método Dark optimiza el flujo de ventas y depura los procesos operativos, eliminando el "ruido" que drena tu capital.
+                    </p>
+                    <div class="stats-boxes">
+                        <div class="stat-box">
+                            <h5 class="counter">+310%</h5>
+                            <span>ROI Promedio</span>
+                        </div>
+                        <div class="stat-box">
+                            <h5 class="counter">-65%</h5>
+                            <span>Fugas Operativas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-visual">
+                    <div class="metric-bar-container">
+                        <div class="metric-label">
+                            <span style="color: aliceblue;">Conversión de Ventas</span>
+                            <span class="percent" style="color: rgb(128, 223, 255);">94%</span>
+                        </div>
+                        <div class="bar-bg"><div class="bar-fill" data-width="94%"></div></div>
+                    </div>
+                    <div class="metric-bar-container">
+                        <div class="metric-label">
+                            <span style="color: aliceblue;">Automatización de Procesos</span>
+                            <span class="percent" style="color: rgb(128, 223, 255);">88%</span>
+                        </div>
+                        <div class="bar-bg"><div class="bar-fill" data-width="88%"></div></div>
+                    </div>
+                    <div class="metric-bar-container">
+                        <div class="metric-label">
+                            <span style="color: aliceblue;">Reducción de Costes Adquisición</span>
+                            <span class="percent" style="color: rgb(128, 223, 255);">42%</span>
+                        </div>
+                        <div class="bar-bg"><div class="bar-fill" data-width="42%"></div></div>
+                    </div>
+                    <p style="font-size: 0.75rem; color: var(--gray); text-align: center; margin-top: 20px; color: aliceblue;">*Datos basados en implementaciones del último trimestre.</p>
+                </div>
+            </div>
+        </section>
+
+
+         <footer class="jb-modern-footer">
+    <div class="footer-container">
+        <div class="footer-cta-wrapper">
+            <h2 class="cta-massive-text">¿Listo para escalar? <br><span class="blue-text">Hablemos.</span></h2>
+            <a href="#contacto" class="cta-round-btn">
+                <span>Empezar Proyecto</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-main-content">
+            <div class="footer-nav-section">
+                <h4 class="section-label">Explora</h4>
+                <nav class="footer-big-links">
+                    <a href="webs/sobremi.html" class="big-link">Conoce más sobre mí <span class="link-arrow">→</span></a>
+                    <a href="webs/insights.html" class="big-link">Vlog: Método Dark <span class="link-tag">Nuevo</span></a>
+                    <a href="webs/vision.html" class="big-link">Mi Trabajo <span class="link-arrow">→</span></a>
+                </nav>
+            </div>
+
+            <div class="footer-side-section">
+                <div class="social-links-grid">
+                    <a href="#" class="social-item">
+                        <span class="platform">Instagram</span>
+                        <span class="handle">@jesusbuendia</span>
+                    </a>
+                    <a href="#" class="social-item">
+                        <span class="platform">LinkedIn</span>
+                        <span class="handle">Jesus Buendia</span>
+                    </a>
+                    <a href="#" class="social-item">
+                        <span class="platform">X (Twitter)</span>
+                        <span class="handle">@jbuendia_b2b</span>
+                    </a>
+                </div>
+                
+                <div class="footer-legal-box">
+                    <p class="copyright-text">&copy; 2026 Jesus Buendia. Economista & Estratega.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacidad</a>
+                        <a href="#">Términos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="../Script/script.js"></script>
+
+    
 </body>
 </html>
