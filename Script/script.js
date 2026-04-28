@@ -280,3 +280,42 @@ gsap.from(".counter", {
                 gsap.to(canvas, { x: x, y: y, duration: 2.5, ease: "sine.out" });
             });
         });
+
+
+                // Animaciones al hacer Scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('sobremi-visible');
+                    
+                    // Si el elemento tiene contadores, ejecutarlos
+                    const counter = entry.target.querySelector('.sobremi-counter');
+                    if(counter) startCounter(counter);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.sobremi-reveal').forEach(el => observer.observe(el));
+
+        // Función para los contadores
+        function startCounter(el) {
+            const target = parseInt(el.getAttribute('data-val'));
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    el.textContent = target + (target > 50 ? '+' : '');
+                    clearInterval(timer);
+                } else {
+                    el.textContent = Math.floor(current);
+                }
+            }, 30);
+        }
+
+        // Efecto Parallax suave en el texto de fondo del hero
+        window.addEventListener('scroll', () => {
+            const bgText = document.querySelector('.sobremi-hero-bg-text');
+            const scroll = window.pageYOffset;
+            bgText.style.transform = `translate(-50%, calc(-50% + ${scroll * 0.2}px))`;
+        });
