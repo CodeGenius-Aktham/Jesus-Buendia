@@ -1,11 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jesus Buendia | Visión 360°</title>
+
+    <!-- Fuentes de Alta Calidad -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Estilos Principales -->
+    <link rel="stylesheet" href="../Estilos/style.css">
+
 </head>
 <body>
-    <h1>Visión 360°</h1>
+
+    <!-- Botón WhatsApp Flotante -->
+    <a href="https://wa.me/TU_NUMERO_AQUI" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <svg width="32" height="32" fill="currentColor" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.8 69.4 27.2 106.2 27.2 122.4 0 222-99.6 222-222 0-59.3-23-115.1-65-157.1zM223.9 446.3c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 366.4l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-82.7 184.6-184.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.5-11.2 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.6-9.2 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+    </a>
+
+    <!-- Navegación -->
+    <div class="nav-container">
+        <nav class="navbar">
+            <a href="../index.html" class="nav-link">Inicio</a>
+            <a href="#" class="nav-link active">Visión 360°</a>
+            <a href="sobremi.html" class="nav-link">Sobre mí</a>
+            <a href="dart.html" class="nav-link">Método Dart</a>
+        </nav>
+    </div>
+
+    <!-- Fondo de Partículas -->
+    <div class="vision-360-canvas-container">
+        <canvas id="vision-360-particles"></canvas>
+    </div>
+
+    <!-- HERO -->
+    <section class="vision-360-hero" id="inicio">
+        <h1 class="vision-360-title" id="main-title">Visión 360°</h1>
+        <p class="vision-360-description" id="main-desc">
+            Análisis profundo, estrategia invisible. Transformamos la complejidad en claridad absoluta.
+        </p>
+    </section>
+
+    <!-- PROCESO PASO A PASO -->
+    <section class="vision-360-process-section">
+        
+        <span class="vision-360-section-label, badge" style="background-color: rgba(6, 6, 66, 0.562); border-color: blue;">Metodología</span>
+        <h2 style="font-size: 3rem; margin-bottom: 50px;">El Trayecto de la Visión</h2>
+        
+        <div class="vision-360-process-container">
+            <div class="vision-360-process-step">
+                <div class="vision-360-step-number">01</div>
+                <div class="vision-360-step-content">
+                    <h4>Inmersión de Datos</h4>
+                    <p>Absorbemos cada variable de tu ecosistema. No solo miramos los números, entendemos el comportamiento humano detrás de ellos.</p>
+                </div>
+            </div>
+
+            <div class="vision-360-process-step">
+                <div class="vision-360-step-number">02</div>
+                <div class="vision-360-step-content">
+                    <h4>Mapeo de Puntos Ciegos</h4>
+                    <p>Identificamos las debilidades invisibles y las oportunidades que la competencia ignora por falta de perspectiva.</p>
+                </div>
+            </div>
+
+            <div class="vision-360-process-step">
+                <div class="vision-360-step-number">03</div>
+                <div class="vision-360-step-content">
+                    <h4>Arquitectura Estratégica</h4>
+                    <p>Diseñamos un plan de acción de 360 grados, asegurando que cada movimiento refuerce el objetivo central.</p>
+                </div>
+            </div>
+
+            <div class="vision-360-process-step">
+                <div class="vision-360-step-number">04</div>
+                <div class="vision-360-step-content">
+                    <h4>Ejecución y Evolución</h4>
+                    <p>Implementamos con precisión quirúrgica y ajustamos en tiempo real según el feedback del mercado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS / CAPACIDADES -->
+    <section class="vision-360-content-section">
+        <span class="vision-360-section-label, badge" style="background-color: rgba(6, 6, 66, 0.562); border-color: blue;">Capacidades</span>
+        <div class="vision-360-grid">
+            <div class="vision-360-card">
+                <div class="vision-360-card-icon">
+                    <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                </div>
+                <h3>Análisis Radical</h3>
+                <p>Detectamos patrones donde otros solo ven ruido. Nuestra visión abarca cada ángulo de tu negocio.</p>
+            </div>
+
+            <div class="vision-360-card">
+                <div class="vision-360-card-icon">
+                    <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M13 13v8h8v-8h-8zM3 21h8v-8H3v8zM3 3v8h8V3H3zm13.66 2.12L12.36 9.42l4.7 4.7 4.7-4.7-5.1-5.3z"/></svg>
+                </div>
+                <h3>Sistemas Adaptativos</h3>
+                <p>Arquitecturas que evolucionan. Creamos soluciones que se mimetizan con el entorno para escalar sin fricción.</p>
+            </div>
+
+            <div class="vision-360-card">
+                <div class="vision-360-card-icon">
+                    <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+                </div>
+                <h3>Impacto Cuántico</h3>
+                <p>Resultados que trascienden. Ejecutamos estrategias precisas con una huella mínima y un retorno máximo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASO DE ÉXITO -->
+    <section class="vision-360-case-section">
+        <span class="vision-360-section-label, badge" style="background-color: rgba(6, 6, 66, 0.562); border-color: blue;">Caso de Éxito</span>
+        <div class="vision-360-case-box" id="case-study">
+            <div class="vision-360-case-info">
+                <h2>Caso: Nova Retail Group</h2>
+                <p style="color: #94a3b8; margin-bottom: 30px;">
+                    En solo 6 meses, rediseñamos la estructura operativa de una cadena minorista en declive. Aplicando nuestra **Visión 360°**, eliminamos cuellos de botella logísticos y automatizamos la retención de clientes.
+                </p>
+                <ul style="list-style: none; color: white;">
+                    <li style="margin-bottom: 10px;">⚡ Reducción de costos operativos: 22%</li>
+                    <li style="margin-bottom: 10px;">⚡ Incremento en lealtad: 45%</li>
+                    <li>⚡ Escalamiento a 3 nuevos mercados</li>
+                </ul>
+            </div>
+            <div class="vision-360-case-metrics">
+                <div class="vision-360-metric-item">
+                    <span class="vision-360-metric-value counter">+310</span>
+                    <span class="vision-360-metric-label">ROI Anual</span>
+                </div>
+                <div class="vision-360-metric-item">
+                    <span class="vision-360-metric-value counter">-40</span>
+                    <span class="vision-360-metric-label">Latencia</span>
+                </div>
+                <div class="vision-360-metric-item">
+                    <span class="vision-360-metric-value counter">12500</span>
+                    <span class="vision-360-metric-label">Nuevos Leads</span>
+                </div>
+                <div class="vision-360-metric-item" style="background: #3b82f6;">
+                    <span class="vision-360-metric-value" style="color: white;">A+</span>
+                    <span class="vision-360-metric-label" style="color: rgba(255,255,255,0.7);">Rating</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTÓN DE ACCIÓN -->
+        <div class="vision-360-action-container" id="action-btn" style="margin-top: 50px; text-align: center;">
+            <a href="../index.html#contacto" class="vision-360-btn-consultar">
+                Consultar mis resultados posibles
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <footer class="jb-modern-footer">
+        <div class="footer-container">
+            <div class="footer-cta-wrapper">
+                <h2 class="cta-massive-text">¿Listo para escalar? <br><span style="color: #3b82f6;">Hablemos.</span></h2>
+                <a href="#contacto" class="cta-round-btn">
+                    <span>Empezar Proyecto</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+            </div>
+
+            <div class="footer-main-content">
+                <div class="footer-nav-section">
+                    <h4 class="section-label">Explora</h4>
+                    <nav class="footer-big-links">
+                        <a href="sobremi.html" class="big-link">Conoce más sobre mí <span class="link-arrow">→</span></a>
+                        <a href="dart.html" class="big-link">Vlog: Método Dart <span class="link-tag" style="background: #3b82f6; font-size: 10px; padding: 2px 6px; border-radius: 4px; margin-left: 10px; color: #0d3779;">Nuevo</span></a>
+                        <a href="#" class="big-link">Mi Trabajo <span class="link-arrow">→</span></a>
+                    </nav>
+                </div>
+
+                <div class="footer-side-section">
+                    <div class="social-links-grid">
+                        <a href="#" class="social-item">
+                            <span class="platform">Instagram</span>
+                            <span class="handle">@jesusbuendia</span>
+                        </a>
+                        <a href="#" class="social-item">
+                            <span class="platform">LinkedIn</span>
+                            <span class="handle">Jesus Buendia</span>
+                        </a>
+                    </div>
+                    
+                    <div class="footer-legal-box">
+                        <p class="copyright-text">&copy; 2026 Jesus Buendia. Economista & Estratega.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Librerías Necesarias -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+
+    <!-- Script Principal -->
+    <script src="../Script/script.js"></script>
 </body>
 </html>

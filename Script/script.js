@@ -165,3 +165,118 @@ gsap.from(".counter", {
         // este bloque puede manejar el formato del texto.
     }
 });
+
+  // Configuración Partículas
+        const canvas = document.getElementById('vision-360-particles');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function initCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particles = [];
+            for (let i = 0; i < 120; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    size: Math.random() * 1.5 + 0.5,
+                    speedX: (Math.random() - 0.5) * 0.3,
+                    speedY: (Math.random() - 0.5) * 0.3,
+                    opacity: Math.random() * 0.5 + 0.2
+                });
+            }
+        }
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.x += p.speedX;
+                p.y += p.speedY;
+                if (p.x > canvas.width) p.x = 0;
+                if (p.x < 0) p.x = canvas.width;
+                if (p.y > canvas.height) p.y = 0;
+                if (p.y < 0) p.y = canvas.height;
+
+                ctx.fillStyle = `rgba(53, 84, 207, ${p.opacity})`;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fill();
+            });
+            requestAnimationFrame(animateCanvas);
+        }
+
+        window.addEventListener('resize', initCanvas);
+        initCanvas();
+        animateCanvas();
+
+        // Animaciones GSAP
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Intro Hero
+            const title = new SplitType('#main-title', { types: 'chars' });
+            gsap.to(title.chars, {
+                opacity: 1, y: 0, rotateX: 0, stagger: 0.04, duration: 1.2, ease: "expo.out", delay: 0.2
+            });
+            gsap.to('#main-desc', { opacity: 1, y: 0, duration: 1, delay: 0.8 });
+
+            // Animación del Paso a Paso
+            gsap.utils.toArray('.vision-360-process-step').forEach((step, i) => {
+                gsap.to(step, {
+                    scrollTrigger: {
+                        trigger: step,
+                        start: "top 85%",
+                    },
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    ease: "power2.out",
+                    delay: i * 0.1
+                });
+            });
+
+            // Animación Cards
+            gsap.from('.vision-360-card', {
+                scrollTrigger: {
+                    trigger: '.vision-360-grid',
+                    start: "top 80%",
+                },
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.2,
+                ease: "back.out(1.7)"
+            });
+
+            // Animación del Caso de Estudio
+            gsap.to('#case-study', {
+                scrollTrigger: {
+                    trigger: '#case-study',
+                    start: "top 80%",
+                },
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                ease: "power4.out"
+            });
+
+            // Animación del botón de acción
+            gsap.to('#action-btn', {
+                scrollTrigger: {
+                    trigger: '#action-btn',
+                    start: "top 90%",
+                },
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: 0.4,
+                ease: "back.out(1.7)"
+            });
+
+            // Parallax mouse
+            window.addEventListener('mousemove', (e) => {
+                const x = (e.clientX / window.innerWidth - 0.5) * 30;
+                const y = (e.clientY / window.innerHeight - 0.5) * 30;
+                gsap.to(canvas, { x: x, y: y, duration: 2.5, ease: "sine.out" });
+            });
+        });
