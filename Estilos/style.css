@@ -1501,6 +1501,8 @@
             overflow: hidden;
         }
 
+        
+
         .sobremi-hero-bg-text {
             position: absolute;
             font-size: 25vw;
@@ -1778,6 +1780,8 @@
             transform: scale(1.05);
             box-shadow: 0 20px 40px rgba(0, 106, 255, 0.3);
         }
+
+        
 
         /* Responsive */
         @media (max-width: 1024px) {
